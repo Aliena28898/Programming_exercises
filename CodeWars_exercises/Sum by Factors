@@ -1,0 +1,40 @@
+prime_fact = []
+import math
+def is_prime(number):
+    if number in [2, 3]:
+        return True
+    for i in range(2, number-1):
+        if number % i == 0:
+            return False
+        i += 1
+    return True
+
+def find_prime_factors(number):
+    global prime_fact
+    lst = []
+    for i in range(2, int(math.fabs(number))+1):
+        print(i)
+        if number % i == 0 and is_prime(i):
+            lst.append(i)
+            if i not in prime_fact:
+                prime_fact.append(i)
+                prime_fact.sort()
+        i += 1
+    
+    return [number, lst]
+
+def sum_for_list(lst):
+    global prime_fact
+    prime_fact = []
+    for i in range(0, len(lst)):
+        lst[i] = find_prime_factors(lst[i])
+    
+    for i in range(0, len(prime_fact)):
+        sum = [prime_fact[i], 0]
+        for element in lst:
+            if prime_fact[i] in element[1]:
+                sum[1] = sum[1] + element[0]
+        prime_fact[i] = sum
+    
+    return prime_fact
+        
