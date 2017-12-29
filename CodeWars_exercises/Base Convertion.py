@@ -26,8 +26,8 @@ The maximum input value can always be encoded in a number without loss of precis
 The function must work for any arbitrary alphabets, not only the pre-defined ones
 You don't have to consider negative numbers
 '''
-'''Python
 
+```python
 #SOLUTION:
 
 def decode(input, source):
@@ -92,4 +92,4 @@ test.assert_equals(convert("27", dec, allow), 'bb', '"27" dec -> alpha_lower');
 test.assert_equals(convert("hello", allow, hex), '320048', '"hello" alpha_lower -> hex')
 test.assert_equals(convert("SAME", alup, alup), 'SAME', '"SAME" alpha_upper -> alpha_upper');
     
-'''
+```
