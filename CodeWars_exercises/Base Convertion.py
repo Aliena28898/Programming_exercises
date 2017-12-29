@@ -26,7 +26,7 @@ The maximum input value can always be encoded in a number without loss of precis
 The function must work for any arbitrary alphabets, not only the pre-defined ones
 You don't have to consider negative numbers
 '''
-'''python
+'''Python
 
 #SOLUTION:
 
